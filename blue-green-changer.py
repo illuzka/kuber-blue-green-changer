@@ -21,7 +21,9 @@ class BlueGreen:
         :return:
         """
 
-        if self.version_label_key in obj: return obj[self.version_label_key]
+        if self.version_label_key in obj: 
+            return obj[self.version_label_key]
+        
         for k, v in obj.items():
             if isinstance(v, dict):
                 item = self.change_role(v, file_name)
